@@ -1,0 +1,2 @@
+# KagawaLimit
+香川県民が1時間以上遊べないように規制するBungee plugin
