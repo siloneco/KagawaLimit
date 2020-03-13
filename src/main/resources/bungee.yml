@@ -1,0 +1,4 @@
+name: ${project.name}
+main: com.github.siloneco.kagawa.bungee.BungeeKagawaLimit
+version: ${project.version}
+author: siloneco
