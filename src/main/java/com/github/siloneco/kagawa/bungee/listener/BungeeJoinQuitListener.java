@@ -22,7 +22,7 @@ public class BungeeJoinQuitListener implements Listener {
         if (!plugin.getController().canJoinPlayer(uuid)) {
             e.setCancelled(true);
             e.setCancelReason(new TextComponent("あなたは1時間以上サーバーに参加できません！\n")
-                    , new TextComponent("香川政府のせいです\n")
+                    , new TextComponent("香川県議会のせいです\n")
                     , new TextComponent("あ～あ"));
             return;
         }
