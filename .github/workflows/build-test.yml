@@ -1,10 +1,21 @@
 name: Build Test
-on: [push, pull_request]
+on:
+  push:
+    paths-ignore:
+      - "**.md"
+      - "renovate.json"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+      - "renovate.json"
 
 jobs:
   build:
+    if: ${{ github.event_name != 'pull_request' || github.repository != github.event.pull_request.head.repo.full_name }}
     name: Build with Java 8
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v2
